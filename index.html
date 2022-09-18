@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesktopSite</title>
+    <link rel="stylesheet" href="desktopsite.css">
+</head>
+<body>
+    <header>
+        <nav class="row">
+            <ul>
+                <li class="nav-list-item"><span class="txt-xl mr-1">&#128376;</span><span class="txt-xl">WebDesktop</span></li>
+                <li class="nav-list-item"><span class="txt-xl">&#128193;</span></li>
+                <li class="nav-list-item "><span class="txt-xl">&#127760;</span></li>
+            </ul>
+            <ul id="taskbar-list">
+
+            </ul>
+        </nav>
+        <span id="myClock"></span>
+    </header>
+
+    <main id="desktop">
+        <div id="background">
+            <ul id="background-list">
+                <h1>Desktop style website:</h1>
+                <h2>Features:</h2>
+                <li class="ml-3"><b>Draggable</b> launchers and folders.</li>
+                <li class="ml-3"><b>Open</b>, <b>close</b> and <b>minimize</b> folders.</li>
+                <li class="ml-3"><span class="txt-green"><b>Create</b></span> new folders.</li>
+                <li class="ml-3"><span class="txt-red"><b>Delete</b></span> only works for client-made folders.</li>
+                <li class="ml-3">Click on image to enlarge it.</li>
+            </ul>
+        </div>
+        <ul class="launcher-list">
+            <li class="launcher-list-item dragAble" target="trash-modal" type="launcher" id="trashLauncher"><span class="desktop-icon" id="trash-modal-icon">&#128465;</span><span class="desktop-icon-txt">Trash</span></li>
+            <li class="launcher-list-item dragAble" target="home-modal" type="launcher" id="homeLauncher"><span class="desktop-icon" id="home-modal-icon">&#128187;</span><span class="desktop-icon-txt">Home</span></li>
+            <li class="launcher-list-item dragAble" target="textEditor-modal" type="launcher" id="textEditorLauncher"><span class="desktop-icon" id="textEditor-modal-icon">&#128196;</span><span class="desktop-icon-txt">Text Editor</span></li>
+            <li class="launcher-list-item dragAble" target="browser-modal" type="launcher" id="browserLauncher"><span class="desktop-icon" id="browser-modal-icon">&#127760;</span><span class="desktop-icon-txt">Browser</span></li>
+            <li class="launcher-list-item dragAble" target="Symbols-modal" type="launcher" id="SymbolsLauncher"><span class="desktop-icon" id="Symbols-modal-icon">&#128193;</span><span class="desktop-icon-txt">Symbols</span></li>
+            <li class="launcher-list-item dragAble" target="Images-modal" type="launcher" id="ImagesLauncher"><span class="desktop-icon" id="Images-modal-icon">&#128193;</span><span class="desktop-icon-txt">Images</span></li>
+            <li class="launcher-list-item dragAble" target="createFolder-modal" type="launcher" id="createFolder"><span class="desktop-icon" id="createFolder-modal-icon">&#127381;</span><span class="desktop-icon-txt">Create Folder</span></li>
+            <li class="launcher-list-item dragAble" target="delFolder-modal" type="launcher" id="delFolder"><span class="desktop-icon" id="delFolder-modal-icon">&#10060;</span><span class="desktop-icon-txt">Delete Folder</span></li>
+        </ul>
+
+        <div class="modal-space">
+            <div class="modal" id="trash-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="trash-modal" type="folder">
+                        <span class="col justify-center ml-2">trash</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="trash-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="trash-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="trash-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+            <div class="modal" id="home-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="home-modal" type="folder">
+                        <span class="col justify-center ml-2">home</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="home-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="home-modal">
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="home-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+            <div class="modal" id="Symbols-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="Symbols-modal" type="folder">
+                        <span class="col justify-center ml-2">Symbols</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="Symbols-modal">
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="Symbols-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="Symbols-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                <div class="row justify-center">
+                    <div class="col-4 justify-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Hex</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="icon-m">&#128683;</span></td>
+                                    <td>#128683</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#10062;</span></td>
+                                    <td>#10062</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128452;</span></td>
+                                    <td>#128452</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128187;</span></td>
+                                    <td>#128187</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128190;</span></td>
+                                    <td>#128190</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128193;</span></td>
+                                    <td>#128193</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128194;</span></td>
+                                    <td>#128194</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128191;</span></td>
+                                    <td>#128191</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-4 justify-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Hex</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="icon-m">&#128196;</span></td>
+                                    <td>#128196</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128221;</span></td>
+                                    <td>#128221</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128228;</span></td>
+                                    <td>#128228</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128229;</span></td>
+                                    <td>#128229</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128465;</span></td>
+                                    <td>#128465</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#128376;</span></td>
+                                    <td>#128376</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#9474;</span></td>
+                                    <td>#9474</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="icon-m">&#127760;</span></td>
+                                    <td>#127760</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                    <div class="row justify-center">
+                        <p>
+                            Useful html symbols.<br>
+                            Full list of symbols: <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" target="_blank">https://www.w3schools.com/charsets/ref_utf_symbols.asp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="Images-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="Images-modal" type="folder">
+                        <span class="col justify-center ml-2">Images</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="Images-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="Images-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="Images-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-center">
+                        <div class="col-4">
+                            <img src="./chimp2.jpg" class="img-fluid img-clickAble">
+                        </div>
+                        <div class="col-4">
+                            <img src="./fsm1.jpg" class="img-fluid img-clickAble">
+                        </div>
+                        <div class="col-4">
+                            <img src="./galapagos1.jpg" class="img-fluid img-clickAble">
+                        </div>
+                    </div>
+                    <div class="row justify-start">
+                        <div class="col-4">
+                            <img src="./skelet2.jpg" class="img-fluid img-clickAble">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="textEditor-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="textEditor-modal" type="folder">
+                        <span class="col justify-center ml-2">Text Editor</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="textEditor-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="textEditor-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="textEditor-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-center">
+                        <textarea></textarea>
+
+                    </div>
+                    <div class="row justify-center">
+                        <div class="col justify-center">
+                            <button type="button" id="saveTxtBtn">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="browser-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="browser-modal" type="folder">
+                        <span class="col justify-center ml-2">Browser embed iframe </span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="browser-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="browser-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="browser-modal" >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body ">
+                    <iframe
+                        width="100%" 
+                        height="640" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=6.41927719116211%2C53.171472871976334%2C6.705951690673829%2C53.26100314329846&amp;layer=mapnik&amp;marker=53.21626139746109%2C6.562614440917969" style="border: 1px solid black">
+                    </iframe>
+                </div>
+            </div>
+            <div class="modal" id="createFolder-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="createFolder-modal" type="folder">
+                        <span class="col justify-center ml-2">Create Folder</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="createFolder-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="createFolder-modal">
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="createFolder-modal">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <div class="col justify-center">
+                        <div class="row justify-center">
+                            <b class="">Folder icon</b>
+                        </div>
+                        <div class="row justify-center">
+                            <ul class="icon-list" id="newFoldIcons">
+                                <li class="icon-list-item active">&#128452;</li>
+                                <li class="icon-list-item">&#128187;</li>
+                                <li class="icon-list-item">&#128190;</li>
+                                <li class="icon-list-item">&#128193;</li>
+                                <li class="icon-list-item">&#128194;</li>
+                                <li class="icon-list-item">&#128191;</li>
+                                <li class="icon-list-item">&#128196;</li>
+                                <li class="icon-list-item">&#128221;</li>
+                                <li class="icon-list-item">&#128228;</li>
+                                <li class="icon-list-item">&#128229;</li>
+                                <li class="icon-list-item">&#128465;</li>
+                                <li class="icon-list-item">&#127760;</li>
+                                <li class="icon-list-item">&#128683;</li>
+                                <li class="icon-list-item">&#10062;</li>
+                                <li class="icon-list-item">&#10060;</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row justify-center">
+                        <b class="">Folder name</b>
+                    </div>
+                    <div class="row justify-center">
+                        <input id="folderName" required="" placeholder="folder" pattern='[a-zA-Z 0-9]+'>
+                    </div>
+                    <hr>
+                    <div class="row justify-center">
+                        <div id="createFolderBtn">Create Folder</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal"id="delFolder-modal">
+                <div class="row justify-center">
+                    <div class="col justify-center">
+                        <span class="txt-xl txt-white">Click on a folder to delete it.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-space">
+            <div class="modal" id="image-modal">
+                <div class="modal-header">
+                    <div class="modal-title row justify-center dragAble" target="image-modal" type="folder">
+                        <span class="col" id="image-name">Image</span>
+                    </div>
+                    <div class="row justify-center modal-btn-list">
+                        <button type="button" class="modal-min-btn" target="image-modal" >
+                            &minus;
+                        </button>
+                        <button type="button" class="modal-grow-btn" target="image-modal" >
+                            &#9713;
+                        </button>
+                        <button type="button" class="modal-close-btn" target="image-modal">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid" src="" id="image-modal-src">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="desktopsite.js"></script>
+</body>
+</html>
